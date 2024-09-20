@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles.css';  // Importando o CSS
 
 const questions = [
   { question: "Qual é a capital do Brasil?", options: ["Rio de Janeiro", "Brasília", "São Paulo"], answer: "Brasília" },
@@ -23,10 +24,10 @@ export default function Home() {
   };
 
   return (
-    <div style={{ padding: "50px", textAlign: "center" }}>
+    <div className="container">
       {showScore ? (
         <div>
-          <h1>Pontuação: {score}/{questions.length}</h1>
+          <h1 className="score">Pontuação: {score}/{questions.length}</h1>
         </div>
       ) : (
         <div>
